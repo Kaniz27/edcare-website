@@ -8,13 +8,18 @@ import Subscribe from './components/subscribe/page'
 import HowWeStart from './components/howwestart/page'
 import Card from './components/card/page.jsx'
 import Testimonial from './components/testimonialcard/page'
-const page = () => {
+import Course from './course/page.jsx'
+
+const page = async() => {
+  
+
   return (
     <div>
       <Hero></Hero>
       <About></About>
       <Category></Category>
       <ChoiceUs></ChoiceUs>
+      <Course></Course>
       <Card></Card>
       <Testimonial></Testimonial>
       <HowWeStart></HowWeStart>

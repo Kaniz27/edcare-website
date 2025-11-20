@@ -1,0 +1,206 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "title": "React Tutorial Beginners For Skills Building",
+      "type": "Free",
+      "lesson": 8,
+      "students": 50,
+      "views": "12K",
+      "instructor": "Kevin Perry",
+      "designation": "Instructor",
+      "rating": 4.7,
+      "price": "$59.00",
+      "image": "https://html.rrdevs.net/edcare/assets/img/images/course-img-1.png",
+      "instructor_image": "https://html.rrdevs.net/edcare/assets/img/images/course-author-1.png"
+    },
+    {
+      "id": "2",
+      "title": "JavaScript Fundamentals for Beginners",
+      "type": "Course",
+      "lesson": 12,
+      "students": 120,
+      "views": "18K",
+      "instructor": "Sarah Johnson",
+      "designation": "Instructor",
+      "rating": 4.8,
+      "price": "$49.00",
+      "image": "https://html.rrdevs.net/edcare/assets/img/images/course-img-2.png",
+      "instructor_image": "https://html.rrdevs.net/edcare/assets/img/images/course-author-2.png"
+    },
+    {
+      "id": "3",
+      "title": "CSS & Tailwind Advanced Techniques",
+      "type": "Course",
+      "lesson": 10,
+      "students": 80,
+      "views": "15K",
+      "instructor": "Mark Wilson",
+      "designation": "Instructor",
+      "rating": 4.6,
+      "price": "$39.00",
+      "image": "https://html.rrdevs.net/edcare/assets/img/images/course-img-3.png",
+      "instructor_image": "https://html.rrdevs.net/edcare/assets/img/images/course-author-3.png"
+    },
+    {
+      "id": "4",
+      "title": "Node.js and Express Full Tutorial",
+      "type": "Course",
+      "lesson": 14,
+      "students": 100,
+      "views": "20K",
+      "instructor": "Lisa Brown",
+      "designation": "Instructor",
+      "rating": 4.7,
+      "price": "$69.00",
+      "image": "/images/courses/node.jpg",
+      "instructor_image": "/images/instructors/lisa.jpg"
+    },
+    {
+      "id": "5",
+      "title": "TypeScript Essentials for Beginners",
+      "type": "Free",
+      "lesson": 6,
+      "students": 60,
+      "views": "8K",
+      "instructor": "Tom Harris",
+      "designation": "Instructor",
+      "rating": 4.5,
+      "price": "$0.00",
+      "image": "/images/courses/typescript.jpg",
+      "instructor_image": "/images/instructors/tom.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Next.js & React Fullstack Course",
+      "type": "Course",
+      "lesson": 16,
+      "students": 200,
+      "views": "25K",
+      "instructor": "Emma White",
+      "designation": "Instructor",
+      "rating": 4.8,
+      "price": "$79.00",
+      "image": "/images/courses/nextjs.jpg",
+      "instructor_image": "/images/instructors/emma.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Python Programming for Web Development",
+      "type": "Course",
+      "lesson": 12,
+      "students": 90,
+      "views": "17K",
+      "instructor": "James King",
+      "designation": "Instructor",
+      "rating": 4.6,
+      "price": "$59.00",
+      "image": "/images/courses/python.jpg",
+      "instructor_image": "/images/instructors/james.jpg"
+    },
+    {
+      "id": "8",
+      "title": "Database Design & SQL Basics",
+      "type": "Course",
+      "lesson": 8,
+      "students": 70,
+      "views": "10K",
+      "instructor": "Olivia Scott",
+      "designation": "Instructor",
+      "rating": 4.5,
+      "price": "$39.00",
+      "image": "/images/courses/sql.jpg",
+      "instructor_image": "/images/instructors/olivia.jpg"
+    },
+    {
+      "id": "9",
+      "title": "UI/UX Design Principles",
+      "type": "Free",
+      "lesson": 5,
+      "students": 40,
+      "views": "7K",
+      "instructor": "Sophia Lee",
+      "designation": "Instructor",
+      "rating": 4.4,
+      "price": "$0.00",
+      "image": "/images/courses/uiux.jpg",
+      "instructor_image": "/images/instructors/sophia.jpg"
+    }
+    
+  ],
+
+  "blogs": [
+    {
+      "id": 1,
+      "date": "August 15, 2025",
+      "category": "Marketing",
+      "title": "The Impact of Technology Modern Classrooms Education",
+      "image": "https://html.rrdevs.net/edcare/assets/img/blog/inner-post-1.png",
+      "button": "Read More"
+    },
+    {
+      "id": 2,
+      "date": "August 15, 2025",
+      "category": "Marketing",
+      "title": "Building Resilience and Empathy in the Classroom",
+      "image": "https://html.rrdevs.net/edcare/assets/img/blog/inner-post-2.png",
+      "button": "Read More"
+    },
+    {
+      "id": 3,
+      "date": "August 15, 2025",
+      "category": "Marketing",
+      "title": "The Importance of Integrating Arts into Science and Technology",
+      "image": "https://html.rrdevs.net/edcare/assets/img/blog/inner-post-3.png",
+      "button": "Read More"
+    },
+    {
+      "id": 4,
+      "date": "August 15, 2025",
+      "category": "Marketing",
+      "title": "How Innovative Pedagogies Are Transforming Education",
+      "image": "https://html.rrdevs.net/edcare/assets/img/blog/inner-post-4.png",
+      "button": "Read More"
+    },
+    {
+      "id": 5,
+      "date": "August 15, 2025",
+      "category": "Marketing",
+      "title": "Online Education Is Empowering Adult Learners",
+      "image": "https://html.rrdevs.net/edcare/assets/img/blog/inner-post-5.png",
+      "button": "Read More"
+    },
+    {
+      "id": 6,
+      "date": "August 15, 2025",
+      "category": "Marketing",
+      "title": "The Critical Role of Education in a Changing Workforce",
+      "image": "https://html.rrdevs.net/edcare/assets/img/blog/inner-post-6.png",
+      "button": "Read More"
+    },
+    {
+      "id": 7,
+      "date": "August 15, 2025",
+      "category": "Marketing",
+      "title": "The Benefits and Challenges of Hybrid Learning Models",
+      "image": "https://html.rrdevs.net/edcare/assets/img/blog/inner-post-7.png",
+      "button": "Read More"
+    },
+    {
+      "id": 8,
+      "date": "August 15, 2025",
+      "category": "Marketing",
+      "title": "Student Achievement Best Practice for Schools and Families",
+      "image": "https://html.rrdevs.net/edcare/assets/img/blog/inner-post-8.png",
+      "button": "Read More"
+    },
+    {
+      "id": 9,
+      "date": "August 15, 2025",
+      "category": "Marketing",
+      "title": "Repurpose mission critical action life items rather total",
+      "image": "https://html.rrdevs.net/edcare/assets/img/blog/inner-post-9.png",
+      "button": "Read More"
+    }
+  ]
+}
