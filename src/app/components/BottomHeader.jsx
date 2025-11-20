@@ -28,7 +28,6 @@ const BottomHeader = () => {
           <Link href="/about" className="hover:text-gray-700">About</Link>
           <Link href="/contact" className="hover:text-gray-700">Contact</Link>
           <Link href="/blog" className="hover:text-gray-700">Blog</Link>
-          <Link href="/category" className="hover:text-gray-700">Category</Link>
           <Link href="/course" className="hover:text-gray-700">Course</Link>
         </div>
 

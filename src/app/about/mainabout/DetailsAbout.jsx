@@ -1,9 +1,10 @@
 import React from 'react';
+import About from './../../components/about/page'
 
 const DetailsAbout = () => {
     return (
         <div>
-            hi kanis
+           <About></About>
         </div>
     );
 };
