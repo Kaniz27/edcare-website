@@ -126,12 +126,10 @@
       "image": "/images/courses/uiux.jpg",
       "instructor_image": "/images/instructors/sophia.jpg"
     }
-    
   ],
-
   "blogs": [
     {
-      "id": 1,
+      "id": "1",
       "date": "August 15, 2025",
       "category": "Marketing",
       "title": "The Impact of Technology Modern Classrooms Education",
@@ -139,7 +137,7 @@
       "button": "Read More"
     },
     {
-      "id": 2,
+      "id": "2",
       "date": "August 15, 2025",
       "category": "Marketing",
       "title": "Building Resilience and Empathy in the Classroom",
@@ -147,7 +145,7 @@
       "button": "Read More"
     },
     {
-      "id": 3,
+      "id": "3",
       "date": "August 15, 2025",
       "category": "Marketing",
       "title": "The Importance of Integrating Arts into Science and Technology",
@@ -155,7 +153,7 @@
       "button": "Read More"
     },
     {
-      "id": 4,
+      "id": "4",
       "date": "August 15, 2025",
       "category": "Marketing",
       "title": "How Innovative Pedagogies Are Transforming Education",
@@ -163,7 +161,7 @@
       "button": "Read More"
     },
     {
-      "id": 5,
+      "id": "5",
       "date": "August 15, 2025",
       "category": "Marketing",
       "title": "Online Education Is Empowering Adult Learners",
@@ -171,7 +169,7 @@
       "button": "Read More"
     },
     {
-      "id": 6,
+      "id": "6",
       "date": "August 15, 2025",
       "category": "Marketing",
       "title": "The Critical Role of Education in a Changing Workforce",
@@ -179,7 +177,7 @@
       "button": "Read More"
     },
     {
-      "id": 7,
+      "id": "7",
       "date": "August 15, 2025",
       "category": "Marketing",
       "title": "The Benefits and Challenges of Hybrid Learning Models",
@@ -187,7 +185,7 @@
       "button": "Read More"
     },
     {
-      "id": 8,
+      "id": "8",
       "date": "August 15, 2025",
       "category": "Marketing",
       "title": "Student Achievement Best Practice for Schools and Families",
@@ -195,7 +193,7 @@
       "button": "Read More"
     },
     {
-      "id": 9,
+      "id": "9",
       "date": "August 15, 2025",
       "category": "Marketing",
       "title": "Repurpose mission critical action life items rather total",
