@@ -1,6 +1,6 @@
 {
   "courses": [
-    {
+   {
       "id": "1",
       "title": "React Tutorial Beginners For Skills Building",
       "type": "Free",
@@ -11,6 +11,7 @@
       "designation": "Instructor",
       "rating": 4.7,
       "price": "$59.00",
+      "category": "Development",
       "image": "https://html.rrdevs.net/edcare/assets/img/images/course-img-1.png",
       "instructor_image": "https://html.rrdevs.net/edcare/assets/img/images/course-author-1.png"
     },
@@ -25,6 +26,7 @@
       "designation": "Instructor",
       "rating": 4.8,
       "price": "$49.00",
+      "category": "Development",
       "image": "https://html.rrdevs.net/edcare/assets/img/images/course-img-2.png",
       "instructor_image": "https://html.rrdevs.net/edcare/assets/img/images/course-author-2.png"
     },
@@ -39,6 +41,7 @@
       "designation": "Instructor",
       "rating": 4.6,
       "price": "$39.00",
+      "category": "Design",
       "image": "https://html.rrdevs.net/edcare/assets/img/images/course-img-3.png",
       "instructor_image": "https://html.rrdevs.net/edcare/assets/img/images/course-author-3.png"
     },
@@ -53,7 +56,8 @@
       "designation": "Instructor",
       "rating": 4.7,
       "price": "$69.00",
-      "image": "/images/courses/node.jpg",
+      "category": "Development",
+      "image": "https://html.rrdevs.net/edcare/assets/img/images/course-img-4.png",
       "instructor_image": "/images/instructors/lisa.jpg"
     },
     {
@@ -67,7 +71,8 @@
       "designation": "Instructor",
       "rating": 4.5,
       "price": "$0.00",
-      "image": "/images/courses/typescript.jpg",
+      "category": "Development",
+      "image": "https://html.rrdevs.net/edcare/assets/img/images/course-img-5.png",
       "instructor_image": "/images/instructors/tom.jpg"
     },
     {
@@ -81,7 +86,8 @@
       "designation": "Instructor",
       "rating": 4.8,
       "price": "$79.00",
-      "image": "/images/courses/nextjs.jpg",
+      "category": "Development",
+      "image": "https://html.rrdevs.net/edcare/assets/img/images/course-img-2.png",
       "instructor_image": "/images/instructors/emma.jpg"
     },
     {
@@ -95,7 +101,8 @@
       "designation": "Instructor",
       "rating": 4.6,
       "price": "$59.00",
-      "image": "/images/courses/python.jpg",
+      "category": "Development",
+      "image": "https://html.rrdevs.net/edcare/assets/img/images/course-img-2.png",
       "instructor_image": "/images/instructors/james.jpg"
     },
     {
@@ -109,7 +116,8 @@
       "designation": "Instructor",
       "rating": 4.5,
       "price": "$39.00",
-      "image": "/images/courses/sql.jpg",
+      "category": "Data Science",
+      "image": "https://html.rrdevs.net/edcare/assets/img/images/course-img-1.png",
       "instructor_image": "/images/instructors/olivia.jpg"
     },
     {
@@ -123,7 +131,8 @@
       "designation": "Instructor",
       "rating": 4.4,
       "price": "$0.00",
-      "image": "/images/courses/uiux.jpg",
+      "category": "Design",
+      "image": "https://html.rrdevs.net/edcare/assets/img/images/course-img-4.png",
       "instructor_image": "/images/instructors/sophia.jpg"
     }
   ],

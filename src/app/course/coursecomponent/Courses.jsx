@@ -1,87 +1,132 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { FaUserGraduate, FaEye, FaStar } from "react-icons/fa";
 
-// Server component: async fetch allowed
-const Courses= async () => {
-  const res = await fetch("http://localhost:5000/courses", { cache: "no-store" });
-  const courses = await res.json();
+const Courses = () => {
+  const [courses, setCourses] = useState([]);
+  const [filter, setFilter] = useState("All");
+
+  const categories = ["All", "Business", "Development", "Marketing", "Finance", "Gaming", "Design", "Data Science"];
+
+ 
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const res = await fetch("http://localhost:5000/courses");
+        const data = await res.json();
+        console.log("Fetched courses:", data); // Debug
+        setCourses(data);
+      } catch (error) {
+        console.error("Error fetching courses:", error);
+      }
+    };
+    fetchCourses();
+  }, []);
+
+  // Filtered courses
+  const filteredCourses = courses.filter(course => {
+    if (!course.category) return filter === "All";
+    const courseCategory = course.category.toString().trim().toLowerCase();
+    const selectedFilter = filter.toString().trim().toLowerCase();
+    return selectedFilter === "all" ? true : courseCategory === selectedFilter;
+  });
 
   return (
-    <div className="container mx-auto px-24 mt-10">
+    <div className="container mx-auto py-20 px-6 md:px-24 mt-10">
       <h1 className="text-4xl font-bold text-center text-gray-800">
         Explore Featured Courses
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-        {courses.map((course) => (
-          <div
-            key={course.id}
-            className="flex flex-col items-center p-6 shadow-lg rounded-lg border bg-white hover:shadow-xl transition"
+      {/* Filter Buttons */}
+      <div className="flex gap-4 justify-center mt-6 flex-wrap">
+        {categories.map(cat => (
+          <button
+            key={cat}
+            onClick={() => setFilter(cat)}
+            className={`px-4 py-2 rounded-full transition mb-2 ${
+              filter === cat ? "bg-[#38b7a6] text-white" : "bg-gray-200 text-gray-800"
+            }`}
           >
-            {/* Course Image */}
-            <img
-              src={course.image}
-              alt={course.title}
-              className="rounded-lg h-48 w-full object-cover mb-4"
-            />
+            {cat}
+          </button>
+        ))}
+      </div>
 
-            {/* Title */}
-            <h2 className="text-xl font-bold text-gray-900 mb-2 text-start">
-              {course.title}
-            </h2>
+      {/* Courses Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+        {filteredCourses.length > 0 ? (
+          filteredCourses.map(course => (
+            <div
+              key={course.id}
+              className="flex flex-col items-center p-6 shadow-lg rounded-lg border bg-white hover:shadow-xl transition"
+            >
+              {/* Course Image */}
+              <img
+                src={course.image || "/images/courses/fallback.jpg"}
+                alt={course.title}
+                className="rounded-lg h-48 w-full object-cover mb-4"
+              />
 
-            {/* Lesson, Students, Views */}
-            <div className="flex justify-between w-full text-gray-600 mb-3 text-sm">
-              <span>{course.lesson} Lessons</span>
-              <span className="flex items-center gap-1">
-                <FaUserGraduate /> {course.students}
-              </span>
-              <span className="flex items-center gap-1">
-                <FaEye /> {course.views}
-              </span>
-            </div>
+              {/* Title */}
+              <h2 className="text-xl font-bold text-gray-900 mb-2 text-start">{course.title}</h2>
 
-            {/* Instructor + Designation + Rating */}
-            <div className="flex items-center justify-between w-full mb-3 text-gray-800">
-              <div className="flex items-center gap-1">
-                {/* Instructor Image */}
-                <img
-                  src={course.instructor_image}
-                  alt={course.instructor}
-                  className="w-12 h-12 rounded-full"
-                />
-                {/* Name + Designation */}
-                <div className="flex flex-col">
-                  <span className="font-medium">{course.instructor}</span>
-                  <span className="text-sm text-gray-500">{course.designation}</span>
+              {/* Lesson, Students, Views */}
+              <div className="flex justify-between w-full text-gray-600 mb-3 text-sm">
+                <span>{course.lesson} Lessons</span>
+                <span className="flex items-center gap-1"><FaUserGraduate /> {course.students}</span>
+                <span className="flex items-center gap-1"><FaEye /> {course.views}</span>
+              </div>
+
+              {/* Instructor + Rating */}
+              <div className="flex items-center justify-between w-full mb-3 text-gray-800">
+                <div className="flex items-center gap-1">
+                  <img
+                    src={course.instructor_image || "/images/instructors/fallback-avatar.png"}
+                    alt={course.instructor}
+                    className="w-12 h-12 rounded-full"
+                  />
+                  <div className="flex flex-col">
+                    <span className="font-medium">{course.instructor}</span>
+                    <span className="text-sm text-gray-500">{course.designation}</span>
+                  </div>
+                </div>
+                <div className="flex items-center text-yellow-400">
+                  {[...Array(5)].map((_, i) => <FaStar key={i} />)}
+                  <span className="text-gray-600 ml-2 text-sm">({course.rating})</span>
                 </div>
               </div>
 
-              {/* Rating */}
-              <div className="flex items-center text-yellow-400">
-                {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} />
-                ))}
-                <span className="text-gray-600 ml-2 text-sm">({course.rating})</span>
+              {/* Divider */}
+              <div className="w-full border-t border-gray-300 my-3"></div>
+
+              {/* Price + Button */}
+              <div className="flex justify-between items-center w-full">
+                <p className="text-gray-800 font-semibold text-lg">{course.price}</p>
+                <Link
+                  href={`/course/${course.id}`}
+                  className="bg-[#38b7a6] hover:bg-blue-700 text-white py-2 px-4 rounded-full transition"
+                >
+                  View Details
+                </Link>
               </div>
             </div>
-
-            {/* Divider */}
-            <div className="w-full border-t border-gray-300 my-3"></div>
-
-            {/* Price + Button */}
-            <div className="flex justify-between items-center w-full">
-              <p className="text-gray-800 font-semibold text-lg">{course.price}</p>
-              <Link
-                href={`/course/${course.id}`}
-                className="bg-[#38b7a6] hover:bg-blue-700 text-white py-2 px-4 rounded-full transition"
-              >
-                View Details
-              </Link>
-            </div>
+          ))
+        ) : (
+          // Empty State Card
+          <div className="col-span-3 flex flex-col items-center justify-center p-10 bg-gray-100 rounded-lg shadow-lg">
+            <h2 className="text-2xl font-bold text-gray-700 mb-4">No Courses Found</h2>
+            <p className="text-gray-500 text-center mb-6">
+              Sorry, there are no courses available in this category at the moment.
+            </p>
+            <img
+              src="/images/courses/no-courses.png"
+              alt="No courses"
+              className="w-40 h-40 object-contain"
+            />
           </div>
-        ))}
+        )}
       </div>
     </div>
   );

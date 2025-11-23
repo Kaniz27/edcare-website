@@ -8,7 +8,7 @@ import Subscribe from './components/subscribe/page'
 import HowWeStart from './components/howwestart/page'
 import Card from './components/card/page.jsx'
 import Testimonial from './components/testimonialcard/page'
-import Course from './course/page.jsx'
+import Courses from './course/coursecomponent/Courses'
 
 const page = async() => {
   
@@ -19,7 +19,7 @@ const page = async() => {
       <About></About>
       <Category></Category>
       <ChoiceUs></ChoiceUs>
-      <Course></Course>
+      <Courses></Courses>
       <Card></Card>
       <Testimonial></Testimonial>
       <HowWeStart></HowWeStart>
