@@ -1,15 +1,37 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { FaRegCalendarAlt, FaTag, FaArrowRight } from "react-icons/fa";
 
-// Server Component: async fetch allowed
-const BlogCard = async () => {
-  const res = await fetch("http://localhost:5000/blogs");
-  const blogs = await res.json();
+const BlogCard = () => {
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // API route fetch (Vercel safe)
+    fetch("/blogs.json") // must point to your Next.js API route
+      .then((res) => res.json())
+      .then((data) => {
+        setBlogs(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Failed to fetch blogs", err);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <p className="text-center mt-10">Loading blogs...</p>;
+  }
+
+  if (!blogs || blogs.length === 0) {
+    return <p className="text-center mt-10 text-red-500">No blogs found.</p>;
+  }
 
   return (
     <div className="container mx-auto px-6 py-20 md:px-12 lg:px-24 mt-10">
-      
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {blogs.map((blog) => (
           <div
@@ -32,8 +54,8 @@ const BlogCard = async () => {
               </div>
               <h2 className="font-semibold text-lg mb-4">{blog.title}</h2>
               <Link href={`/blog/${blog.id}`}>
-                <button className="flex items-center text-[#38b7a6] border border-gray-300 px-8 rounded-full py-2 gap-2  hover:text-blue-800 font-medium">
-                  {blog.button} <FaArrowRight />
+                <button className="flex items-center text-[#38b7a6] border border-gray-300 px-8 rounded-full py-2 gap-2 hover:text-blue-800 font-medium">
+                  {blog.button || "Read More"} <FaArrowRight />
                 </button>
               </Link>
             </div>
