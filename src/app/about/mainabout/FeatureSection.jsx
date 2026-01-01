@@ -38,7 +38,7 @@ const FeatureSection = () => {
           </div>
 
           {/* CARD 2 */}
-          <div className="bg-white p-8 rounded-2xl shadow-md flex flex-col items-center text-center">
+          <div className="bg-white p-8fe rounded-2xl shadow-md flex flex-col items-center text-center">
             <img
               src="https://html.rrdevs.net/edcare/assets/img/images/video-img-2.png"
               className="w-100 h-100 object-cover mb-4 rounded-2xl"

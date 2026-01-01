@@ -14,7 +14,7 @@ const Courses = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const res = await fetch("http://localhost:5000/courses");
+        const res = await fetch("/course.json");
         const data = await res.json();
         console.log("Fetched courses:", data); // Debug
         setCourses(data);
